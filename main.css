@@ -1,13 +1,12 @@
-
 body {
-    background-color: silver;
+    background-color: #ffffff;
     color: black;
     font-family: Arial;
     margin: 0px;
 }
 
 header {
-    background: linear-gradient(to right, gold, pink, red, green);
+    background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff);
     text-align: right;
     color: black;
     font-size: 12px;
@@ -21,12 +20,13 @@ main {
 }
 
 footer {
-    position: relative;
-    background-color: lightgreen;
+    position: absolute;
+    background-color: #f4f4f449;
     color: black;
     padding: 10px;
     font-size: 16px;
     text-align: right;
+    position: relative;
     top: 25%;
 }
 
