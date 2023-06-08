@@ -1,0 +1,39 @@
+
+body {
+    background-color: silver;
+    color: black;
+    font-family: Arial;
+    margin: 0px;
+}
+
+header {
+    background: linear-gradient(to right, gold, pink, red, green);
+    text-align: right;
+    color: black;
+    font-size: 12px;
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+    height: 386px;
+
+}
+
+main {
+    margin: 10px 20px;
+}
+
+footer {
+    position: relative;
+    background-color: lightgreen;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    text-align: right;
+    top: 25%;
+}
+
+
+a:hover {
+    color: blue;
+    background-color: white;
+    transition: 50ms linear;
+    transition-property: all;
+}
