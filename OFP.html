@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основные финансовые показатели</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .text {
+            margin: 50px;
+            color: black;
+            
+        }
+        .menusite {
+            color: black;
+            background-color: white;
+            text-decoration: none;
+            position: relative;
+            font-size: 18px;
+        }
+        .table {
+            border: 3px solid ;
+            border-radius: 15px;
+            margin: 30px;
+            margin-left: 50px;
+            width: 600px;
+            height: 30%;
+            display: inline-table;
+            text-align: center;
+        }
+        .blockfin {
+            display: inline-block;
+            padding: 10px;
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            border: 1px solid;
+            border-radius: 1px;
+            background-color: white;
+            margin-top: 0px;
+            border-color: black;
+            position: static;
+            height: 100px;
+            width: 400px;
+        }
+        .blockfin1 {
+            position: absolute;
+            display: inline-block;
+            padding: 10px;
+            margin-top: 50px;
+            margin-left: 50px;
+            top: 20px;
+            margin-bottom: 50px;
+            border: 1px solid;
+            border-radius: 1px;
+            background-color: white;
+            margin-top: 0px;
+            border-color: black;
+            position: static;
+            height: 100px;
+            width: 400px;
+        }
+    </style>
+    <script>
+        function ITEK() {
+            let exchange = [125.5, 124.25, 122.5, 124.15, 124.15, 124.6, 122.4, 122.45, 126.35, 126.75, 127, 
+            125.05, 124.25, 125, 125.05, 127.65, 125.9, 124.7, 124.25, 121.7]
+            
+            let sum = 0
+            for(let i = 0; i < exchange.length; i++) {
+                sum = sum + exchange[i];
+            }
+            let average = sum / exchange.length;
+            let standdev = Math.sqrt(average)
+            let min = Math.min.apply(Math, exchange)
+            let max = Math.max.apply(Math, exchange)
+
+            document.getElementById('srkvadr').innerHTML = standdev;
+            document.getElementById('max').innerHTML = max;
+            document.getElementById('min').innerHTML = min;
+        }
+    </script>
+</head>
+<body onload="ITEK()">
+    <header>
+        <div style=" position: relative; text-align: left; top: 10px; margin-left: 18%;" >
+            <a href="https://yatec.ru"><img src="itek.PNG" height="80px"></a>
+            <p><a href="ONAS.html" class="menusite">О компании</a></p>
+            <p><a href="OFP.html" class="menusite" style="color: blue;">Основные финансовые показатели</a></p>
+            <p><a href="Kontackt.html" class="menusite">Контактные данные</a></p>
+            <p><a href="Video.html" class="menusite">Видео</a></p>
+        </div>
+    </header>
+
+    <div class="text" style="font-size: 28px;">
+        <b>Основные финансовые показатели.</b>
+    </div>
+    <div class="text">
+        <p>
+            На странице вы можете ознакомится с основными финансовыми показателями компании <b><i>ЯТЭК</i></b>.
+        </p>
+        <a href="https://www.moex.com/ru/issue.aspx?board=TQBR&code=YAKG&utm_source=www.moex.com&utm_term=ЯТЭ">
+            Источник - Московская фондовая биржа
+        </a>
+    </div>
+
+    <table class="table" border="3px solid">
+        <caption>Таблица - "Цена акция Таттелеком по дням за Апрель 2023г"</caption>
+        <tr>
+            <th>Дата</th>
+            <th>Цена</th>
+        </tr>
+        <tr><td>03.04.2023</td><td>125.5</td></tr>
+        <tr><td>04.04.2023</td><td>124.25</td></tr>
+        <tr><td>05.04.2023</td><td>122.5</td></tr>
+        <tr><td>06.04.2023</td><td>124.15</td></tr>
+        <tr><td>07.04.2023</td><td>124.15</td></tr>
+        <tr><td>10.04.2023</td><td>124.6</td></tr>
+        <tr><td>11.04.2023</td><td>122.4</td></tr>
+        <tr><td>12.04.2023</td><td>122.45</td></tr>
+        <tr><td>13.04.2023</td><td>126.35</td></tr>
+        <tr><td>14.04.2023</td><td>126.75</td></tr>
+        <tr><td>17.04.2023</td><td>127</td></tr>
+        <tr><td>18.04.2023</td><td>125.05</td></tr>
+        <tr><td>19.04.2023</td><td>124.25</td></tr>
+        <tr><td>20.04.2023</td><td>125</td></tr>
+        <tr><td>21.04.2023</td><td>125.05</td></tr>
+        <tr><td>24.04.2023</td><td>127.65</td></tr>
+        <tr><td>25.04.2023</td><td>125.9</td></tr>
+        <tr><td>26.04.2023</td><td>124.7</td></tr>
+        <tr><td>27.04.2023</td><td>124.25</td></tr>
+        <tr><td>28.04.2023</td><td>121.7</td></tr>
+    </table>  
+    <div class="blockfin1">
+        <b style="font-size: 20px;">Капитализация на конец Апреля 2023г.</b>
+            <div class="rub" style="padding: 20px; font-size: 24px;">
+                <b>198 451 400</b> 
+            </div>
+    </div>  
+    <div class="blockfin1" style="font-size: 20px;">
+        <b>Общее число акций Апреля 2023г.</b>
+            <div style="padding: 20px; font-size: 24px;">
+                <b>19 491<span style="color: gray; font-size: 20px;">шт</span></b>
+            </div>
+    </div>
+    <div style="font-size: 24px; margin: 50px;">
+        <b>Расчётные значения на основе цен закрытие торгов:</b>
+    </div>
+            
+    <div class="blockfin">
+        <b style="font-size: 20px;">Минимальное значение:</b>
+            <div id="min" class="rub" style="padding: 20px; font-size: 24px;">
+                
+            </div>
+    </div>
+
+    <div class="blockfin">
+        <b style="font-size: 20px;">Максимальное значение:</b>
+            <div id="max" class="rub" style="padding: 20px; font-size: 24px;">
+                
+            </div>
+    </div>
+
+    <div class="blockfin">
+        <b style="font-size: 20px;">Среднеквадратическое отклонение:</b>
+            <div id="srkvadr" style="padding: 20px; font-size: 24px;">
+            </div>
+    </div>
+
+    <footer>
+        &copy; Нагайцев Максим, ФБИ-12, 2 курс, 2023
+    </footer>
+    
+</body>
+</html>
